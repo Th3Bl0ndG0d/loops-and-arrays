@@ -20,6 +20,10 @@
 // loop...
 // klaar!
 // ==========================================
+for (let i = 0; i < 4; i++) {
+    console.log("Loop");
+}
+console.log("Klaar");
 
 
 // ==========================================
@@ -34,6 +38,15 @@
 // 'INV-0006'
 // 'INV-0007'
 // 'INV-0008'
+
+for (let i = 1; i < 9; i++) {
+    console.log("INV-000"+i);
+}
+//Miss een wat mooiere oplossing. Maar opdracht vroeg hier niet om
+for (let i = 1; i <= 10; i++) {
+    let factuurnummer = "INV-" + String(i).padStart(4, '0');
+    console.log(factuurnummer);
+}
 
 // ==========================================
 
@@ -55,7 +68,20 @@
 // 17:00 Bijna klaar...
 // 18:00
 // ==========================================
+const pauzes = {
+    10: "Koffiepauze!",
+    12: "Lunchpauze!",
+    14: "Koffiepauze!",
+    17: "Bijna klaar..."
+};
 
+for (let i = 9; i <= 18; i++) {
+    if (pauzes[i]) {
+        console.log(i + ":00 " + pauzes[i]);
+    } else {
+        console.log(i + ":00");
+    }
+}
 
 // ==========================================
 // Opdracht 5. Maak een for-loop die van 0 tot 9 loopt en de getallen 0 tot 9 logt.
@@ -72,6 +98,18 @@
 // >> 8
 // >> 9
 // ==========================================
+for (let i = 0; i <= 9; i++) {
+    if (i >= 6) {
+        console.log(">> " + i);
+    }
+    else if (i >= 3) {
+        console.log("> " + i);
+    }
+    else
+    {
+        console.log(i);
+    }
+}
 
 
 // ==========================================
