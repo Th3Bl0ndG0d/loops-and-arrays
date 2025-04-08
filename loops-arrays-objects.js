@@ -175,7 +175,7 @@ const employees = [
 ];
 
 for (let i = 0; i < employees.length; i++) {
-	employees[i].email= (employees[i].firstName+employees[i].lastName + "@loop-it-solutions.nl").toLowerCase(); //Bonis 6
+	employees[i].email= (employees[i].firstName+employees[i].lastName + "@loop-it-solutions.nl").toLowerCase(); //Bonus 6
 	console.log("firstName: '"+ employees[i].firstName +"', lastName: '"+employees[i].lastName +"', email: '"+employees[i].email +"'" );
 }
 
