@@ -23,6 +23,10 @@ const salaryDetails = [
 	{name: 'Otis', salary: 2800}
 ];
 
+for (let i = 0; i < salaryDetails.length; i++) {
+	console.log("Beste "+ salaryDetails[i].name + ", je salaris van " + salaryDetails[i].salary +",- is zojuist overgemaakt. Val me nu alsjeblieft niet meer lastig.");
+}
+
 // ==========================================
 // Opdracht 2. Wanneer iemand een verlof-aanvraag doet, moet Bob eerst uit zijn hoofd uitrekenen of deze medewerker nog
 // voldoende vrije dagen over heeft voor de aanvraag. En dat gaat nog wel eens mis... Zorg ervoor dat het aantal vakantiedagen
@@ -43,6 +47,9 @@ const vacationDays = [
 	{name: 'Nina', totalVacationDays: 25, usedVacationDays: 5},
 	{name: 'Otis', totalVacationDays: 25, usedVacationDays: 7},
 ];
+for (let i = 0; i < vacationDays.length; i++) {
+	console.log(vacationDays[i].name + " heeft nog " + (vacationDays[i].totalVacationDays - vacationDays[i].usedVacationDays) + " vakantie dagen over.");
+}
 
 
 // ==========================================
@@ -62,6 +69,15 @@ const employeesInTraining = [
 	{name: 'Nina', training: 'Teamworktraining', month: 'Maart'},
 	{name: 'Otis', training: 'Teamworktraining', month: 'Februari'},
 ];
+
+const monthToCheck = "Januari";
+
+for (let i = 0; i < employeesInTraining.length; i++) {
+	if(employeesInTraining[i].month===monthToCheck)
+	{
+		console.log(employeesInTraining[i].name + ": " + employeesInTraining[i].training);
+	}
+}
 
 // ==========================================
 // Opdracht 4a. Medewerkers worden ieder jaar beoordeelt op hun functioneren. Het is aan Bob om de scores om te zetten
@@ -89,6 +105,19 @@ const scores = [
 	{name: 'Otis', score: 100, salaryIncrease: null},
 ];
 
+for (let i = 0; i < scores.length; i++) {
+	let increase=0;
+	if (scores[i].score >= 60 && scores[i].score <= 69) {
+		increase = 2;
+	} else if (scores[i].score >= 70 && scores[i].score <= 89) {
+		increase= 3;
+	} else if (scores[i].score >= 90 && scores[i].score <= 99) {
+		increase= 4;
+	} else if (scores[i].score === 100) {
+		increase = 6;
+	}
+	console.log(increase+ '%');  // Print het salarisverhoging-percentage
+}
 // ==========================================
 // Opdracht 4b. Breid je script uit door het percentage op te slaan in de 'salaryIncrease'-property van ieder object in de array.
 
@@ -104,6 +133,20 @@ const scores = [
 // ];
 // ==========================================
 
+for (let i = 0; i < scores.length; i++) {
+	if (scores[i].score < 60) {
+		scores[i].salaryIncrease = 0;
+	} else if (scores[i].score >= 60 && scores[i].score <= 69) {
+		scores[i].salaryIncrease = 2;
+	} else if (scores[i].score >= 70 && scores[i].score <= 89) {
+		scores[i].salaryIncrease = 3;
+	} else if (scores[i].score >= 90 && scores[i].score <= 99) {
+		scores[i].salaryIncrease = 4;
+	} else if (scores[i].score === 100) {
+		scores[i].salaryIncrease = 6;
+	}
+	console.log("name: '"+scores[i].name +"', score: " + scores[i].score+", saleryIncrease: '"+ scores[i].salaryIncrease + "'%");  // Print het salarisverhoging-percentage
+}
 
 
 // ==========================================
@@ -130,6 +173,12 @@ const employees = [
 	{firstName: 'Nina', lastName: 'Berg'},
 	{firstName: 'Otis', lastName: 'Kuiper'},
 ];
+
+for (let i = 0; i < employees.length; i++) {
+	employees[i].email= (employees[i].firstName+employees[i].lastName + "@loop-it-solutions.nl").toLowerCase(); //Bonus 6
+	console.log("firstName: '"+ employees[i].firstName +"', lastName: '"+employees[i].lastName +"', email: '"+employees[i].email +"'" );
+}
+
 
 // ==========================================
 // Opdracht 6 (BONUS). Bob wil dat alle e-mailadressen in kleine letters worden opgeslagen, zodat ze consistent zijn.
